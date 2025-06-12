@@ -1,0 +1,19 @@
+
+<h1><a href="{% url 'todo:list' %}">Todo List</a></h1>
+
+<div>
+    <!--{%if%}-->
+    <div>조건문이 맞을때</div>
+    <span>안녕하세요.<strong>{#{username}}</strong></span>
+    <form method="post">
+    <button type="submit">로그아웃 </button></a><!--서버로 보내기-->
+    </form>
+    <a href="#">+ 새 할일 추가</a>
+    <!--{%else%}-->
+    <div>로그아웃일때</div>
+
+    <a href="#">로그인</a> <!--링크로 보내기-->
+    <a href="#">회원가입</a>
+    <!--{%endif%}-->
+
+</div>

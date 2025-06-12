@@ -1,0 +1,18 @@
+{% extends "todo/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h2>{{todos.name}}</h2>>
+<p>{{todos.description}}</p>
+<p>완료여부: {{ todos.complete }}</p>
+<p>경험치: {{ todos.exp }}</p>
+<p>작성일: {{ todos.created_at }}</p>
+<p>수정일: {{ todos.updated_at }}</p>
+<p>완료일: {{ todos.completed_at }}</p>
+
+<a href="#">수정</a>
+<a href="#">삭제</a>
+<a href="{% url 'todo:list' %}">목록</a>
+
+{% endblock %}
