@@ -1,0 +1,17 @@
+{% extends "todo/base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>할 일 추가</h2>
+
+<form method ="post"> # method post랑 get 차이 공부하기 토큰이랑 form 필드 끌어쓰는것도 복습하기
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type ="submit">저장</button>
+</form>
+
+<a href="{% url 'todo:list' %}">목록</a>
+
+</form>
+
+{% endblock %}

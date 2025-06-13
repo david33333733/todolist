@@ -1,0 +1,17 @@
+{% extends "todo/base.html" %}
+{% load static %}
+{% block content %}
+<h2>회원가입</h2>
+<form method="post">
+    {% csrf_token %}
+    {% if form.errors %}
+    <div>
+        {{form.erors}}
+    </div>
+    {% endif %}
+    {{ form.as_p }}
+    <button type="submit" class="button-link">회원가입</button>
+
+</form>
+<a href="{% url 'login' %}" class="button-link"> 이미계정이 있으신가요?</a>
+{% endblock %}

@@ -13,8 +13,11 @@
         </div>
 
         <div> <!--권한부여-->
-            <a href="#">수정</a>
-            <a href="#">삭제</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'todo:update' todo.pk %}">수정</a>
+                <a href="{% url 'todo:delete' todo.pk %}">삭제</a>
+            {%else%}
+            {%endif%}
         </div>
     
     </li>

@@ -1,0 +1,12 @@
+{% extends "todo/base.html" %}
+{% load static %}
+{% block content %}
+<h2>로그인 되었습니다.</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Join</button>
+
+
+</form>
+{% endblock %}
